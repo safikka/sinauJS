@@ -44,3 +44,16 @@ function Majalah(title, author, year, month){
 Majalah.prototype = Object.create(Buku.prototype);
 const majalah1 = new Majalah('ngeseng','kali','2091','Mar');
 console.log(majalah1.ulasanBuku());
+
+
+// create object
+const dancokMatamu = {
+    getDancok: function(){
+        return `${this.bgst} was ${this.ajg}`;
+    }
+};
+const dancok1 = Object.create(dancokMatamu,{
+    bgst: {value: 'Bajol'},
+    ajg: {value: 'Impostor'}
+});
+console.log(dancok1);
